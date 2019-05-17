@@ -41,26 +41,11 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
         noRedes=(EditText) findViewById(R.id.noRedes);
         int N;
         int noR= Integer.parseInt(noRedes.toString());
-        if(noR<=4){
-            N=2;
-        }else if(noR<=8){
-            N=3;
-        }else if(noR<=16){
-            N=4;
-        }else if(noR<=32){
-            N=5;
-        }else if(noR<=64){
-            N=6;
-        }else if(noR<=128){
-            N=7;
-        }else if(noR<=256){
-            N=8;
-        }else{
-            Toast.makeText(this,"Ingrese valores menores a 257",Toast.LENGTH_LONG).show();
-        }
+        double n=(Math.log(noR))/(Math.log(2));
+        int a=(int)Math.ceil(n);
+        System.out.println(a);
 
     }
-
 
     @Override
     public void onClick(View view) {
@@ -140,8 +125,9 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
 
                     }
 
-                else
+                else {
                     ver.setText("Division / incorrecta");
+                }
                 noRedes();
             }
         }
