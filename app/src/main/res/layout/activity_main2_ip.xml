@@ -124,6 +124,7 @@
 
 
         <LinearLayout
+            android:id="@+id/segundo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layouthijo1"
@@ -222,6 +223,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/segundo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/TextViewRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
 
         </LinearLayout>
 
