@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="111dp"
+            android:layout_height="30dp"
+            android:text="Direccion IP: "
+            android:textSize="18sp"
+            android:hint="Valor"
+            android:textColor="@color/colorAccent" />
+
+
+
+        <EditText
+            android:id="@+id/o1"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:textColorHint="#000"
+            android:hint="000"
+            android:selectAllOnFocus="true"
+            android:maxLength="3"
+            android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="." />
+
+        <EditText
+            android:id="@+id/o2"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:digits="0123456789"
+            android:ems="10"
+            android:inputType="number"
+            android:textColorHint="#000"
+            android:hint="000"
+            android:selectAllOnFocus="true"
+            android:maxLength="3"
+            android:textColor="@color/colorAccent"/>
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="." />
+
+        <EditText
+            android:id="@+id/o3"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:digits="0123456789"
+            android:textColorHint="#000"
+            android:hint="000"
+            android:selectAllOnFocus="true"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/colorAccent" />
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="." />
+
+        <EditText
+            android:id="@+id/o4"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:digits="0123456789"
+            android:ems="10"
+            android:textColorHint="#000"
+            android:hint="000"
+            android:selectAllOnFocus="true"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/colorAccent" />
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="/" />
+
+        <EditText
+            android:id="@+id/sub"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:textColorHint="#000"
+            android:hint="0"
+            android:selectAllOnFocus="true"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/noRedes"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            android:hint="No. de Subredes"
+            android:selectAllOnFocus="true"
+            android:inputType="number"
+            android:singleLine="false"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/b1"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listo"
+            android:textColor="#5555" />
+
+        <TextView
+            android:id="@+id/val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_height="wrap_content"
+            android:text="Ip inicial"
+            />
+        <TextView
+            android:id="@+id/di"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            />
+
+
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección final"
+            android:textColor="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/df"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent" />
+
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:textColor="@color/colorAccent"
+            android:text="Mascara de RED" />
+        <TextView
+            android:id="@+id/mr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            />
+
+
+
+
+        <TextView
+            android:id="@+id/TextViewRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+        <TextView
+            android:id="@+id/hola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"/>
+
+    </LinearLayout>
+
+</ScrollView>
