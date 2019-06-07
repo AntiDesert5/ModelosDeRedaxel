@@ -17,6 +17,7 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
     EditText a,b,c,d,div,noRedes,q;
     TextView ver,mr1,di1,df1,result,result2;
     Button b1;
+    private int totnu=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +65,11 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
             int n = Integer.parseInt(div.getText().toString());
             noRedes=(EditText) findViewById(R.id.noRedes);
             int nu= Integer.parseInt(noRedes.getText().toString());
+            double n1=(Math.log(nu))/(Math.log(2));
+            int be=(int)Math.ceil(n1);
+            System.out.println(be);//aqui funciona
+
+
             int a=0,f,g = 0,g2=0,n2=1,D=n;
             int s=d;
             int g1=d,g12=t,g13=c;
@@ -75,7 +81,8 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
                 System.out.println(u);
                 int f2=c;
                 f2++;
-                di1.setText(""+u+"."+d+"."+t+"."+f2+"/"+nu);
+                totnu=be+n;
+                di1.setText(""+u+"."+d+"."+t+"."+f2+"/"+totnu);
                     if(n>=24){
                         n=n-24;
                         n2=4;
@@ -226,22 +233,45 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
                     result2.setText("Subredes\n");
                 if(n2==0){
                     mr1.setText(g2+".0.0.0");
+                }else if(n2==1){
+                    for(i=0;i<nu;i++){
+                        s=s+g;
+                        System.out.println(s);
+                        result2.setText(result2.getText()+"\n"+(s-8)+"."+g1+"."+g12+"."+g13);
+                    }
                 }else if(n2==2){
                     for(i=0;i<nu;i++){
                         s=s+g;
                         System.out.println(s);
+                        if((s-8)>=255){
+                            u++;
+                            s=s-256;
+                        }
                         result2.setText(result2.getText()+"\n"+u+"."+(s-8)+"."+g12+"."+g13);
+
                     }
                 }else if(n2==3){
                     mr1.setText("255.255."+g2+".0");
                     for(i=0;i<nu;i++){
+                        //s=s+g;
                         s=s+g;
-                        result2.setText(result2.getText()+"\n"+u+"."+g1+"."+(s-8)+"."+g12);
+                        if((s)>=255){
+                            g1++;
+                            s=s-256;
+                        }
+                        result2.setText(result2.getText()+"\n"+u+"."+g1+"."+(s)+"."+g12);
+
                     }
                 }else if(n2==4){
-                    mr1.setText("255.255.255"+g2);for(i=0;i<nu;i++){
+                    mr1.setText("255.255.255."+g2);for(i=0;i<nu;i++){
                         s=s+g;
+                        //aqui
+                        if((s-8)>=255){
+                            g12++;
+                            s=s-256;
+                        }
                         result2.setText(result2.getText()+"\n"+u+"."+g1+"."+g12+"."+(s-8));
+
                     }
                 }
                 System.out.println(p);
