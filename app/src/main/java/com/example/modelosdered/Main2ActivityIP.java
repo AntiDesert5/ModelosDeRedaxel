@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class Main2ActivityIP extends AppCompatActivity implements View.OnClickListener {
     EditText a,b,c,d,div,noRedes,q;
-    TextView ver,mr1,di1,df1,result,result2;
+    TextView ver,mr1,di1,df1,result,result2,ipinicialf,ipfinalf;
     Button b1;
     private int totnu=0;
     @Override
@@ -37,6 +37,8 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
         mr1 = (TextView) findViewById(R.id.mr);
         di1 = (TextView) findViewById(R.id.di);
         df1 = (TextView) findViewById(R.id.df);
+        ipinicialf = (TextView) findViewById(R.id.ipinicialf);
+        ipfinalf = (TextView) findViewById(R.id.ipfinalf);
 
         b1.setOnClickListener(this);
 
@@ -238,6 +240,7 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
                         s=s+g;
                         System.out.println(s);
                         result2.setText(result2.getText()+"\n"+(s-8)+"."+g1+"."+g12+"."+g13);
+                        ipinicialf.setText(result2.getText()+"\n"+u+"."+g1+"."+g12+"."+"1");
                     }
                 }else if(n2==2){
                     for(i=0;i<nu;i++){
@@ -248,6 +251,7 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
                             s=s-256;
                         }
                         result2.setText(result2.getText()+"\n"+u+"."+(s-8)+"."+g12+"."+g13);
+                        ipinicialf.setText(result2.getText()+"\n"+u+"."+(s-7)+"."+g12+"."+"1");
 
                     }
                 }else if(n2==3){
@@ -260,6 +264,7 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
                             s=s-256;
                         }
                         result2.setText(result2.getText()+"\n"+u+"."+g1+"."+(s)+"."+g12);
+                        ipinicialf.setText(result2.getText()+"\n"+u+"."+g1+"."+(s)+"."+"1");
 
                     }
                 }else if(n2==4){
@@ -271,6 +276,7 @@ public class Main2ActivityIP extends AppCompatActivity implements View.OnClickLi
                             s=s-256;
                         }
                         result2.setText(result2.getText()+"\n"+u+"."+g1+"."+g12+"."+(s-8));
+                        ipinicialf.setText(result2.getText()+"\n"+u+"."+g1+"."+g12+"."+(s-7));
 
                     }
                 }
